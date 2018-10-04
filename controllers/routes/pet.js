@@ -7,7 +7,7 @@ let getPets = (req, res) => {
     Pet.find((err, pets) => {
         if (err) {
             console.log(i++)
-            res.send(err); // :D
+            res.send(err)
             return;
         }
         res.send(pets);
