@@ -4,5 +4,6 @@ node_js:
   - "7"
   
 sudo: enbale #Hỗ trợ chạy trên ubuntu
-script: npm run start #scipt để chạy unit test
+script: npm run test #scipt để chạy unit test // đang sai
 #sau khi chạy xong các bạn push thư mục này lên git
+#mình thủ thay đổi
