@@ -5,7 +5,7 @@ let Pet = require("../models/pet");
  */
 let getPets = (req, res) => {
     Pet.find((err, pets) => {
-        if (err) {
+        // if (err) {
             console.log(i++)
             res.send(err); // :D
             return;
