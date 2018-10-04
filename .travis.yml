@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - "iojs"
+  - "7"
+  
+sudo: enbale #Hỗ trợ chạy trên ubuntu
+script: npm run start #scipt để chạy unit test
+#sau khi chạy xong các bạn push thư mục này lên git
