@@ -18,8 +18,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/json'}));
 
-app.get("/", (req, res) => res.json({message: "Welcome to our Petstore!"}));
-
+// app.get("/", (req, res) => res.json({message: "Welcome to our Petstore!"}));
+app.get('/', function(req,res){
+    console.log(__dirname);
+    res.sendfile(__dirname + '/index.html');
+   }); 
 app.route("/pets")
     .get(pet.getPets)
     .post(pet.postPet);
