@@ -3,4 +3,4 @@ node_js:
   - "iojs"
   - "7"
 sudo: enable # su dung do minh xài ubuntu
-script: npm run test # run test
+script: node test/tetest_driver # run test
