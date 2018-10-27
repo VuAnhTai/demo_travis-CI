@@ -122,7 +122,7 @@ describe('Pets', () => {
         it('should add a SINGLE pet on /pets POST', function(done) {
             chai.request(server)
             .post('/pets')
-            .send({'id': '12', 'name': 'Kitty12', 'status': 'available'})
+            .send({'id': '13', 'name': 'Kitty13', 'status': 'available'})
             .end(function(err, res){
                 res.should.have.status(200);
                 res.body.should.be.a('object');
@@ -131,13 +131,12 @@ describe('Pets', () => {
                 res.body.pet.should.have.property('name');
                 res.body.pet.should.have.property('status');
                 res.body.pet.should.have.property('id');
-                res.body.pet.id.should.equal('12');
-                res.body.pet.name.should.equal('Kitty12');
+                res.body.pet.name.should.equal('Kitty13');
                 res.body.pet.status.should.equal('available');
             done();
             });
         });
-        it('should add a SINGLE pet on /pets POST', function(done) {
+        it('should add a SINGLE pet dont have name and statu  /pets POST', function(done) {
             chai.request(server)
             .post('/pets')
             .send({})
